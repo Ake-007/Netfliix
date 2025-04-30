@@ -7,7 +7,7 @@ import Login from './pages/Login/Login';
 import Player from './pages/Player/Player';
 import { ToastContainer } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
-import './i18n';
+import './i18n.js';
 
 const App = () => {
   const navigate = useNavigate();
