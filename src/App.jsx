@@ -6,12 +6,12 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Player from './pages/Player/Player';
 import { ToastContainer } from 'react-toastify';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'; 
 
 const App = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
-  const { t } = useTranslation();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -28,6 +28,7 @@ const App = () => {
   return (
     <div>
       <ToastContainer theme="dark" />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
